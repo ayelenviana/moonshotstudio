@@ -31,7 +31,7 @@
 }
 .header .container .nav .nav__list {
   display: flex;
-  gap: 20px;
+  gap: 33px;
 }
 .header .container .nav .nav__list .nav__link a {
   color: white;
@@ -53,7 +53,7 @@
   }
   .header .container .nav {
     position: absolute;
-    width: 50%;
+    width: 100%;
     top: 50px;
     left: 0;
     transition: all 0.5s ease;
@@ -63,6 +63,7 @@
     flex-direction: column;
     background-color: #002420;
     padding: 1em;
+    align-items: center;
   }
 }
 
@@ -346,30 +347,22 @@
 }
 
 .container__galery {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-.container__galery .linea {
-  background: black;
+  background-color: black;
+  margin: auto;
+  height: calc(100vh - 100px);
+  width: 100%;
 }
 .container__galery .galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  width: 95%;
-  margin: auto;
-  grid-gap: 25px;
-  padding: 40px 0;
-  overflow: hidden;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
-.container__galery .galeria .img {
-  width: 100%;
-  vertical-align: top;
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+.container__galery .galeria img {
+  width: 500px;
+  height: 250px;
 }
-
 .container__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -22,7 +22,7 @@
         .nav {
             .nav__list {
                 display: flex;
-                gap: 20px;
+                gap: 33px;
                 .nav__link {
                     a {
                         color: white;
@@ -55,20 +55,20 @@
 
             .nav {
                 position: absolute;
-                width: 50%;
+                width: 100%;
                 top: 50px;
                 left: 0;
                 transition: all 0.5s ease;
                 z-index: 3;
 
                 .nav__list {
-                    flex-direction: column;
+                    flex-direction: column;                    
                     background-color: map-get($colores , color-primario);
                     padding: 1em;
-                    
+                    align-items: center;
                 }
             }
         }
     }
-    
+   
 }
