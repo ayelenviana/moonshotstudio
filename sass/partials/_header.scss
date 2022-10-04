@@ -1,0 +1,74 @@
+.header {
+    background-color: map-get($colores, color-primario);
+    .container {
+        max-width: 1440px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em 0;
+
+        h1 {
+            color: white;
+        }
+        .bx {
+            display: none;
+        }
+
+        #menu-btn {
+            display: none;
+        }
+
+        .nav {
+            .nav__list {
+                display: flex;
+                gap: 20px;
+                .nav__link {
+                    a {
+                        color: white;
+                        
+                        &:hover {
+                            color: black;
+                        }
+                    }
+                 
+                }
+            }
+        }
+    
+    }
+
+    @media (max-width: 780px) {
+        .container {
+            max-width: 350px;
+            .bx {
+                display: block;
+                font-size: 40px;
+                color: white;                
+            }
+
+            #menu-btn {
+                &:checked ~ .nav {
+                  left: -100%;
+                }
+            }
+
+            .nav {
+                position: absolute;
+                width: 50%;
+                top: 50px;
+                left: 0;
+                transition: all 0.5s ease;
+                z-index: 3;
+
+                .nav__list {
+                    flex-direction: column;
+                    background-color: map-get($colores , color-primario);
+                    padding: 1em;
+                    
+                }
+            }
+        }
+    }
+    
+}
